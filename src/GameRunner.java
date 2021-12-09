@@ -10,6 +10,7 @@ public class GameRunner {
         fly.setHealth(5);
         fly.setAttackPower(5);
 
+
         Enemy rat = new Enemy();
         //Health 10, Attack 5,
         //25% chance of spawn, 20% chance of item drop, 80% chance of dropping coins (2)
@@ -36,7 +37,7 @@ public class GameRunner {
 
         //main menu loop
         while (gameOn) {
-            System.out.println("Choose an option(1-5):");
+            System.out.println("Choose an option (1-5):");
             System.out.println("1. Roam the world");
             System.out.println("2. Check hero stats");
             System.out.println("3. Shop");
@@ -48,11 +49,11 @@ public class GameRunner {
             switch(userInput) {
                 case 1:
                     //roam
-                    w.roamTheWorld(h, e1);
+                    w.roamTheWorld(atom, fly, rat, spider, dog);
                     break;
                 case 2:
                     //check stats
-                    System.out.println(h.toString());
+                    System.out.println(atom.toString());
                     break;
                 case 3:
                     //shop
