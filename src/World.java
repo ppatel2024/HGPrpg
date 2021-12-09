@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -17,8 +18,10 @@ public class World {
         while (battleOn) {
 
             Random a = new Random();
-            //20% of the time it is a CRITICAL HIT, 2 * AP
             int enumber = a.nextInt(5) + 1;
+
+            Random h = new Random();
+            int healPoint = h.nextInt(5) + 5;
 
             if (enumber <= 2) {
                 System.out.println("An fly is approaching!");
@@ -69,30 +72,35 @@ public class World {
                                     int tempML3 = atom.getmagLevel() + 1;
                                     atom.setmagLevel(tempML3);
                                     break;
-                                }
+                                } else {
                                 System.out.println("The fly now has " + fly.getHealth() + " health remaining");
+                                        System.out.println(" ");
+                                        System.out.println("The fly attacks you!");
+                                        fly.attack(atom);
+                                        System.out.println(" ");
+                                        System.out.println("You now have " + atom.getHealth() + " health remaining");
+                                        System.out.println(" ");
                                 break;
+                            }
                         }
-                            case 2:
-                                System.out.println("Heal");
-                                break;
-                            case 3:
-                                System.out.println("Run away");
-                                break;
-                            default:
-                                System.out.println("Wrong Input");
-                                break;
-                        }
-
-                        if (fly.getHealth() > 0) {
-                            System.out.println("The fly attacks you!");
-                            fly.attack(atom);
-                            System.out.println(" ");
-                            System.out.println("You now have " + atom.getHealth() + " health remaining");
-                            System.out.println(" ");
-                        }
-
-
+                        break;
+                    case 2:
+                        System.out.println("You got " + healPoint + " health!");
+                        int moreHealth = atom.getHealth() + healPoint;
+                        atom.setHealth(moreHealth);
+                        System.out.println(" ");
+                        System.out.println("Your health is now: " + atom.getHealth());
+                        System.out.println(" ");
+                        break;
+                    case 3:
+                        System.out.println("You have escaped!");
+                        System.out.println(" ");
+                        battleOn = false;
+                        break;
+                    default:
+                        System.out.println("Wrong Input");
+                        break;
+                }
 
             } else if (enumber > 2 && enumber <= 4) {
                 System.out.println("An rat is approaching! ");
@@ -143,29 +151,40 @@ public class World {
                                     int tempML2 = atom.getmagLevel() + 1;
                                     atom.setmagLevel(tempML2);
                                     break;
-                                }
+                                } else {
                                 System.out.println("The rat now has " + rat.getHealth() + " health remaining");
+                                    System.out.println(" ");
+                                    System.out.println("The rat attacks you!");
+                                    rat.attack(atom);
+                                    System.out.println(" ");
+                                    System.out.println("You now have " + atom.getHealth() + " health remaining");
+                                    System.out.println(" ");
                                 break;
+
+                            }
                         }
+                        break;
                     case 2:
-                        System.out.println("Heal");
+                        System.out.println("You got " + healPoint + " health!");
+                        int moreHealth1 = atom.getHealth() + healPoint;
+                        atom.setHealth(moreHealth1);
+                        System.out.println(" ");
+                        System.out.println("Your health is now: " + atom.getHealth());
+                        System.out.println(" ");
                         break;
                     case 3:
-                        System.out.println("Run away");
+                        System.out.println("You have escaped!");
+                        System.out.println(" ");
+                        battleOn = false;
                         break;
                     default:
                         System.out.println("Wrong Input");
                         break;
                 }
 
-            if (rat.getHealth() > 0) {
-                System.out.println("The rat attacks you!");
-                rat.attack(atom);
-                System.out.println(" ");
-                System.out.println("You now have " + atom.getHealth() + " health remaining");
-                System.out.println(" ");
 
-            }
+
+
 
 
             } else {
@@ -217,32 +236,42 @@ public class World {
                                     int tempML4 = atom.getmagLevel() + 1;
                                     atom.setmagLevel(tempML4);
                                     break;
-                                }
+                                } else {
                                 System.out.println("The spider now has " + spider.getHealth() + " health remaining");
+                                    System.out.println(" ");
+                                    System.out.println("The spider attacks you!");
+                                    spider.attack(atom);
+                                    System.out.println(" ");
+                                    System.out.println("You now have " + atom.getHealth() + " health remaining");
+                                    System.out.println(" ");
                                 break;
+
+                            }
                         }
-                        System.out.println("The spider now has " + spider.getHealth() + " health remaining");
-                        break;
+                    break;
+
                     case 2:
-                        System.out.println("Heal");
+                        System.out.println("You got " + healPoint + " health!");
+                        int moreHealth2 = atom.getHealth() + healPoint;
+                        atom.setHealth(moreHealth2);
+                        System.out.println(" ");
+                        System.out.println("Your health is now: " + atom.getHealth());
+                        System.out.println(" ");
                         break;
                     case 3:
-                        System.out.println("Run away");
+                        System.out.println("You have escaped!");
+                        System.out.println(" ");
+                        battleOn = false;
                         break;
                     default:
                         System.out.println("Wrong Input");
                         break;
                 }
 
-                if (spider.getHealth() > 0) {
-                    System.out.println("The spider attacks you!");
-                    spider.attack(atom);
-                    System.out.println(" ");
-                    System.out.println("You now have " + atom.getHealth() + " health remaining");
-                    System.out.println(" ");
                 }
+
 
             }
         }
     }
-}
+
