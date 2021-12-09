@@ -73,15 +73,19 @@ public class World {
                                     atom.setmagLevel(tempML3);
                                     break;
                                 } else {
-                                System.out.println("The fly now has " + fly.getHealth() + " health remaining");
-                                        System.out.println(" ");
-                                        System.out.println("The fly attacks you!");
-                                        fly.attack(atom);
+                                    System.out.println("The fly now has " + fly.getHealth() + " health remaining");
+                                    System.out.println(" ");
+                                    System.out.println("The fly attacks you!");
+                                    fly.attack(atom);
+                                    if (atom.getHealth() < 0) {
+                                        battleOn = false;
+                                    } else {
                                         System.out.println(" ");
                                         System.out.println("You now have " + atom.getHealth() + " health remaining");
                                         System.out.println(" ");
-                                break;
-                            }
+                                        break;
+                                    }
+                                }
                         }
                         break;
                     case 2:
@@ -101,6 +105,7 @@ public class World {
                         System.out.println("Wrong Input");
                         break;
                 }
+
 
             } else if (enumber > 2 && enumber <= 4) {
                 System.out.println("An rat is approaching! ");
@@ -152,38 +157,38 @@ public class World {
                                     atom.setmagLevel(tempML2);
                                     break;
                                 } else {
-                                System.out.println("The rat now has " + rat.getHealth() + " health remaining");
+                                    System.out.println("The rat now has " + rat.getHealth() + " health remaining");
                                     System.out.println(" ");
                                     System.out.println("The rat attacks you!");
                                     rat.attack(atom);
-                                    System.out.println(" ");
-                                    System.out.println("You now have " + atom.getHealth() + " health remaining");
-                                    System.out.println(" ");
-                                break;
+                                    if (atom.getHealth() < 0) {
+                                        battleOn = false;
+                                        System.out.println(" ");
+                                        System.out.println("You now have " + atom.getHealth() + " health remaining");
+                                        System.out.println(" ");
+                                        break;
 
-                            }
+                                    }
+                                }
                         }
-                        break;
-                    case 2:
-                        System.out.println("You got " + healPoint + " health!");
-                        int moreHealth1 = atom.getHealth() + healPoint;
-                        atom.setHealth(moreHealth1);
-                        System.out.println(" ");
-                        System.out.println("Your health is now: " + atom.getHealth());
-                        System.out.println(" ");
-                        break;
-                    case 3:
-                        System.out.println("You have escaped!");
-                        System.out.println(" ");
-                        battleOn = false;
-                        break;
-                    default:
-                        System.out.println("Wrong Input");
-                        break;
-                }
-
-
-
+                                break;
+                            case 2:
+                                System.out.println("You got " + healPoint + " health!");
+                                int moreHealth1 = atom.getHealth() + healPoint;
+                                atom.setHealth(moreHealth1);
+                                System.out.println(" ");
+                                System.out.println("Your health is now: " + atom.getHealth());
+                                System.out.println(" ");
+                                break;
+                            case 3:
+                                System.out.println("You have escaped!");
+                                System.out.println(" ");
+                                battleOn = false;
+                                break;
+                            default:
+                                System.out.println("Wrong Input");
+                                break;
+                        }
 
 
 
@@ -237,36 +242,39 @@ public class World {
                                     atom.setmagLevel(tempML4);
                                     break;
                                 } else {
-                                System.out.println("The spider now has " + spider.getHealth() + " health remaining");
+                                    System.out.println("The spider now has " + spider.getHealth() + " health remaining");
                                     System.out.println(" ");
                                     System.out.println("The spider attacks you!");
                                     spider.attack(atom);
-                                    System.out.println(" ");
-                                    System.out.println("You now have " + atom.getHealth() + " health remaining");
-                                    System.out.println(" ");
+                                    if (atom.getHealth() < 0) {
+                                        battleOn = false;
+                                        System.out.println(" ");
+                                        System.out.println("You now have " + atom.getHealth() + " health remaining");
+                                        System.out.println(" ");
+                                        break;
+
+                                    }
+                                }
+                        }
                                 break;
 
-                            }
+                            case 2:
+                                System.out.println("You got " + healPoint + " health!");
+                                int moreHealth2 = atom.getHealth() + healPoint;
+                                atom.setHealth(moreHealth2);
+                                System.out.println(" ");
+                                System.out.println("Your health is now: " + atom.getHealth());
+                                System.out.println(" ");
+                                break;
+                            case 3:
+                                System.out.println("You have escaped!");
+                                System.out.println(" ");
+                                battleOn = false;
+                                break;
+                            default:
+                                System.out.println("Wrong Input");
+                                break;
                         }
-                    break;
-
-                    case 2:
-                        System.out.println("You got " + healPoint + " health!");
-                        int moreHealth2 = atom.getHealth() + healPoint;
-                        atom.setHealth(moreHealth2);
-                        System.out.println(" ");
-                        System.out.println("Your health is now: " + atom.getHealth());
-                        System.out.println(" ");
-                        break;
-                    case 3:
-                        System.out.println("You have escaped!");
-                        System.out.println(" ");
-                        battleOn = false;
-                        break;
-                    default:
-                        System.out.println("Wrong Input");
-                        break;
-                }
 
                 }
 
