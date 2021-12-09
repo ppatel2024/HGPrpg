@@ -3,8 +3,19 @@ import java.util.Scanner;
 public class GameRunner {
     public static void main(String[] args) {
         //Game objects and characters
-        Hero h = new Hero();
-        Enemy e1 = new Enemy ();
+        Hero atom = new Hero();
+        Enemy fly = new Enemy();
+        //Health 5, Attack 5,
+        //25% chance of spawn, 10% chance of item drop, 90% chance of dropping coin (1)
+        Enemy rat = new Enemy();
+        //Health 10, Attack 5,
+        //25% chance of spawn, 20% chance of item drop, 80% chance of dropping coins (2)
+        Enemy spider = new Enemy();
+        //Health 20, Attack 10,
+        //10% chance of spawn, 30% chance of item drop, 70% chance of dropping coins (3)
+        Enemy dog = new Enemy();
+        //FINAL BOSS
+        //Health 100, Attack 30
         World w = new World();
         Scanner scan = new Scanner(System.in);
         boolean gameOn = true;
