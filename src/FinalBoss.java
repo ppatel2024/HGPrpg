@@ -88,6 +88,7 @@ public class FinalBoss {
                                     System.out.println("You now have " + atom.getHealth() + " health remaining");
                                     System.out.println(" ");
                                 } else {
+                                    System.out.println("You have died!");
                                     FinalBattle = false;
                                     break;
                                 }

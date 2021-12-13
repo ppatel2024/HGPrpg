@@ -5,57 +5,91 @@ public class GameRunner {
         //Game objects and characters
         Hero atom = new Hero();
         Enemy fly = new Enemy();
+        fly.setHealth(5);
+        fly.setAttackPower(5);
         //Health 5, Attack 5,
         //25% chance of spawn, 10% chance of item drop, 90% chance of dropping coin (1)
         Enemy rat = new Enemy();
+        rat.setHealth(10);
+        rat.setAttackPower(5);
         //Health 10, Attack 5,
         //25% chance of spawn, 20% chance of item drop, 80% chance of dropping coins (2)
         Enemy spider = new Enemy();
+        spider.setHealth(20);
+        spider.setAttackPower(10);
         //Health 20, Attack 10,
         //10% chance of spawn, 30% chance of item drop, 70% chance of dropping coins (3)
         Enemy dog = new Enemy();
+        dog.setHealth(100);
+        dog.setAttackPower(30);
         //FINAL BOSS
         //Health 100, Attack 30
         World w = new World();
+        FinalBoss f = new FinalBoss();
         Scanner scan = new Scanner(System.in);
+        boolean alive = true;
         boolean gameOn = true;
 
-        System.out.println("Welcome to the HGP RPG");
+
+        System.out.println("Welcome to INSERT NAME HERE!");
+        System.out.println(" ");
+        System.out.println("One day while walking around, ");
 
         //main menu loop
         while (gameOn) {
-            System.out.println("Choose an option(1-5):");
-            System.out.println("1. Roam the world");
-            System.out.println("2. Check hero stats");
-            System.out.println("3. Shop");
-            System.out.println("4. Final Boss Battle");
-            System.out.println("5. Quit Game");
+            while (alive) {
 
-            int userInput = scan.nextInt();
+                if (atom.getHealth() <= 0) {
+                    alive = false;
+                } else {
+                    System.out.println("Choose an option(1-5):");
+                    System.out.println("1. Roam the world");
+                    System.out.println("2. Check hero stats");
+                    System.out.println("3. Shop");
+                    System.out.println("4. Final Boss Battle");
+                    System.out.println("5. Quit Game");
 
-            switch(userInput) {
-                case 1:
-                    //roam
-                    w.roamTheWorld(h, e1);
-                    break;
-                case 2:
-                    //check stats
-                    System.out.println(h.toString());
-                    break;
-                case 3:
-                    //shop
-                case 4:
-                    //final boss
-                    break;
-                case 5:
-                    //end game
-                    gameOn = false;
-                    System.out.println("Thanks for playing.");
-                    break;
-                default:
-                    System.out.println("INVALID INPUT. Try again.");
-                    break;
+                    int userInput = scan.nextInt();
+
+                    switch (userInput) {
+                        case 1:
+                            //roam
+                            w.roamTheWorld(atom, fly, rat, spider, dog);
+                            break;
+                        case 2:
+                            //check stats
+                            System.out.println(atom.toString());
+                            break;
+                        case 3:
+                            //shop
+                        case 4:
+                            //final boss
+                            f.fighttheBoss(atom, dog);
+                            break;
+                        case 5:
+                            //end game
+                            alive = false;
+                            System.out.println("Thanks for playing!");
+                            break;
+                        default:
+                            System.out.println("INVALID INPUT. Try again.");
+                            break;
+                    }
+                }
             }
+            System.out.println("Game over! Would you like to play again? (1 - yes, 2 - no)");
+
+            int userInput1 = scan.nextInt();
+
+            if (userInput1 == 1) {
+                atom.setHealth(100);
+                alive = true;
+            } else if (userInput1 == 2) {
+                System.out.println("Thanks for playing!");
+            } else {
+                System.out.println("Invalid Input");
+            }
+
         }
     }
 }
