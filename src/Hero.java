@@ -7,6 +7,7 @@ public class Hero {
     private int magLevel;
     private String name;
     private String[] inventory = new String[5];
+    private int toonieLevel;
 
     //Constructor
     Hero() {
@@ -14,6 +15,7 @@ public class Hero {
         this.name = "Hero";
         this.inventory[0] = null;
         this.magLevel = 0;
+        this.toonieLevel = 0;
     }
 
     //Helper Method
@@ -59,6 +61,14 @@ public class Hero {
             this.magLevel = magLevel;
         }
 
+        public int getToonieLevel () {
+            return toonieLevel;
+        }
+
+        public void setToonieLevel ( int toonieLevel){
+            this.toonieLevel = toonieLevel;
+        }
+
         @Override
         public String toString () {
             return
@@ -68,6 +78,8 @@ public class Hero {
             " | " +
             "Magic Level:" + magLevel +
             " | " +
+                            "Toonies: " + toonieLevel +
+                            " | "
             "Inventory:" + Arrays.toString(inventory);
 
         }
