@@ -15,6 +15,7 @@ public class World {
         Scanner bScan = new Scanner(System.in);
         int userInput;
 
+
         while (battleOn) {
 
             Random a = new Random();
