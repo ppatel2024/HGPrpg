@@ -79,7 +79,7 @@ public class Hero {
             "Magic Level:" + magLevel +
             " | " +
                             "Toonies: " + toonieLevel +
-                            " | " +
+                            " | "
             "Inventory:" + Arrays.toString(inventory);
 
         }
