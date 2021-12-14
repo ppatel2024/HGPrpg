@@ -6,7 +6,7 @@ public class Hero {
     private int health;
     private int magLevel;
     private String name;
-    private String[] inventory = new String[5];
+    public String[] inventory = new String[10];
     private int toonieLevel;
 
     //Constructor
