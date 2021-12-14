@@ -12,7 +12,7 @@ public class Hero {
     //Constructor
     Hero() {
         this.health = 100;
-        this.name = "Hero";
+        this.name = "Atom";
         this.inventory[0] = null;
         this.magLevel = 0;
         this.toonieLevel = 0;

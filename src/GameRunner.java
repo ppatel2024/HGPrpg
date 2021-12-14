@@ -32,9 +32,9 @@ public class GameRunner {
         boolean gameOn = true;
 
 
-        System.out.println("Welcome to INSERT NAME HERE!");
+        System.out.println("Welcome to the Tale of the Oversized Atom!");
         System.out.println(" ");
-        System.out.println("One day while walking around, ");
+        System.out.println("You awake from a day of stressing over midterms and a negative lunch balance. All of the sudden your blanket stretches so far it looks like a sea of cotton. You hear your mother call your name from the kitchen “Atom!” You crawl out of your bed after sprinting off, nearly breaking your bones and you enter a world of evil.");
 
         //main menu loop
         while (gameOn) {
