@@ -1,6 +1,7 @@
 import java.sql.SQLOutput;
 import java.util.Random;
 import java.util.Scanner;
+import java.util.TooManyListenersException;
 
 public class World {
     //Attributes
@@ -23,6 +24,9 @@ public class World {
 
             Random h = new Random();
             int healPoint = h.nextInt(5) + 5;
+
+            Random t = new Random();
+            int ToonGen = t.nextInt(10) + 1;
 
             if (enumber <= 2) {
                 System.out.println("An fly is approaching!");
@@ -49,10 +53,17 @@ public class World {
                                     System.out.println(" ");
                                     System.out.println("You have earned +1 Magic Power!");
                                     System.out.println(" ");
-
                                     int tempML1 = atom.getmagLevel() + 1;
                                     atom.setmagLevel(tempML1);
-                                    break;
+                                    if (ToonGen <= 9) {
+                                        System.out.println("You have earned 1 Toonie!");
+                                        System.out.println(" ");
+                                        int tempTL1 = atom.getToonieLevel() +1;
+                                        atom.setToonieLevel(tempTL1);
+                                        break;
+                                    } else {
+                                        break;
+                                    }
                                 }
 
                             case 2:
@@ -69,10 +80,17 @@ public class World {
                                     System.out.println(" ");
                                     System.out.println("You have earned +1 Magic Power!");
                                     System.out.println(" ");
-
                                     int tempML3 = atom.getmagLevel() + 1;
                                     atom.setmagLevel(tempML3);
-                                    break;
+                                    if (ToonGen <= 9) {
+                                        System.out.println("You have earned 1 Toonie!");
+                                        System.out.println(" ");
+                                        int tempTl3 = atom.getToonieLevel() + 1;
+                                        atom.setToonieLevel(tempTl3);
+                                        break;
+                                    } else {
+                                        break;
+                                    }
                                 } else {
                                     System.out.println("The fly now has " + fly.getHealth() + " health remaining");
                                     System.out.println(" ");
@@ -133,10 +151,21 @@ public class World {
                                     System.out.println(" ");
                                     System.out.println("You have earned +1 Magic Power!");
                                     System.out.println(" ");
-
                                     int tempML = atom.getmagLevel() + 1;
                                     atom.setmagLevel(tempML);
-                                    break;
+                                    if (ToonGen <= 8) {
+                                        System.out.println("You have earned 2 Toonies!");
+                                        System.out.println(" ");
+                                        int tempTL = atom.getToonieLevel() +2;
+                                        atom.setToonieLevel(tempTL);
+                                        break;
+                                    } else {
+                                        System.out.println("You have earned 1 Toonie!");
+                                        System.out.println(" ");
+                                        int tempTL = atom.getToonieLevel() + 1;
+                                        atom.setToonieLevel(tempTL);
+                                        break;
+                                    }
                                 }
 
                             case 2:
@@ -153,10 +182,21 @@ public class World {
                                     System.out.println(" ");
                                     System.out.println("You have earned +1 Magic Power!");
                                     System.out.println(" ");
-
                                     int tempML2 = atom.getmagLevel() + 1;
                                     atom.setmagLevel(tempML2);
-                                    break;
+                                    if (ToonGen <= 8) {
+                                        System.out.println("You have earned 2 Toonies!");
+                                        System.out.println(" ");
+                                        int tempTL2 = atom.getToonieLevel() + 2;
+                                        atom.setToonieLevel(tempTL2);
+                                        break;
+                                    } else {
+                                        System.out.println("You have earned 1 Toonie!");
+                                        System.out.println(" ");
+                                        int tempTL2 = atom.getToonieLevel() + 1;
+                                        atom.setToonieLevel(tempTL2);
+                                        break;
+                                    }
                                 } else {
                                     System.out.println("The rat now has " + rat.getHealth() + " health remaining");
                                     System.out.println(" ");
@@ -218,10 +258,27 @@ public class World {
                                     System.out.println(" ");
                                     System.out.println("You have earned +1 Magic Power!");
                                     System.out.println(" ");
-
                                     int tempML1 = atom.getmagLevel() + 1;
                                     atom.setmagLevel(tempML1);
-                                    break;
+                                    if (ToonGen <= 7) {
+                                        System.out.println("You have earned 3 Toonies!");
+                                        System.out.println(" ");
+                                        int tempTL1 = atom.getToonieLevel() +3;
+                                        atom.setToonieLevel(tempTL1);
+                                        break;
+                                    } else if (ToonGen <= 8) {
+                                        System.out.println("You have earned 2 Toonies!");
+                                        System.out.println(" ");
+                                        int tempTL1 = atom.getToonieLevel() + 2;
+                                        atom.setToonieLevel(tempTL1);
+                                        break;
+                                    } else {
+                                        System.out.println("You have earned 1 Toonie!");
+                                        System.out.println(" ");
+                                        int tempTL1 = atom.getToonieLevel() + 1;
+                                        atom.setToonieLevel(tempTL1);
+                                        break;
+                                    }
                                 }
 
                             case 2:
@@ -238,10 +295,17 @@ public class World {
                                     System.out.println(" ");
                                     System.out.println("You have earned +1 Magic Power!");
                                     System.out.println(" ");
-
                                     int tempML4 = atom.getmagLevel() + 1;
                                     atom.setmagLevel(tempML4);
-                                    break;
+                                    if (ToonGen <= 9) {
+                                        System.out.println("You have earned 1 Toonie!");
+                                        System.out.println(" ");
+                                        int tempTL4 = atom.getToonieLevel() + 1;
+                                        atom.setToonieLevel(tempTL4);
+                                        break;
+                                    } else {
+                                        break;
+                                    }
                                 } else {
                                     System.out.println("The spider now has " + spider.getHealth() + " health remaining");
                                     System.out.println(" ");
