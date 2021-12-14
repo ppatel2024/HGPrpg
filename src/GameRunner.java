@@ -25,6 +25,7 @@ public class GameRunner {
         //FINAL BOSS
         //Health 100, Attack 30
         World w = new World();
+        Shop s = new Shop();
         FinalBoss f = new FinalBoss();
         Scanner scan = new Scanner(System.in);
         boolean alive = true;
@@ -62,6 +63,8 @@ public class GameRunner {
                             break;
                         case 3:
                             //shop
+                            s.visitTheShop(atom);
+                            break;
                         case 4:
                             //final boss
                             f.fighttheBoss(atom, dog);
