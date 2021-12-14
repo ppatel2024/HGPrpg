@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="HGPrpg:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/HGPrpg_jar</output-path>
+    <root id="archive" name="HGPrpg.jar">
+      <element id="module-output" name="HGPrpg" />
+    </root>
+  </artifact>
+</component>
