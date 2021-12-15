@@ -312,7 +312,7 @@ public class Shop {
                                     atom.setToonieLevel(tempTL);
                                     System.out.println("I'm not really sure what this is dear, but I think it could be of use to you.");
                                     System.out.println("*She gives you an old Post-It note*.");
-                                    System.out.println("On it is written: 'When I grow up, I want to own 7 dogs!' ");
+                                    System.out.println("On it is written: 'When I grow up, I want to own 11 dogs!' ");
 
                                     System.out.println(" ");
                                     System.out.println("Would you like to buy something else? 1 = yes, 2 = no");
@@ -720,7 +720,7 @@ public class Shop {
                                     atom.setToonieLevel(tempTL);
                                     System.out.println("I'm not really sure what this is dear, but I think it could be of use to you.");
                                     System.out.println("*She gives you an old Post-It note*.");
-                                    System.out.println("On it is written: 'When I grow up, I want to own 7 dogs!' ");
+                                    System.out.println("On it is written: 'When I grow up, I want to own 11 dogs!' ");
 
                                     System.out.println(" ");
                                     System.out.println("Would you like to buy something else? 1 = yes, 2 = no");
@@ -992,7 +992,7 @@ public class Shop {
                                     atom.setToonieLevel(tempTL);
                                     System.out.println("I'm not really sure what this is dear, but I think it could be of use to you.");
                                     System.out.println("*She gives you an old Post-It note*.");
-                                    System.out.println("On it is written: 'When I grow up, I want to own 7 dogs!' ");
+                                    System.out.println("On it is written: 'When I grow up, I want to own 11 dogs!' ");
 
                                     System.out.println(" ");
                                     System.out.println("Would you like to buy something else? 1 = yes, 2 = no");

@@ -297,6 +297,15 @@ public class FinalBoss {
                                     System.out.println("Incorrect input, try again.");
                                 }
                                 break;
+                            case 11:
+                                System.out.println("You call out your dogs name, and for a moment, he recognizes you!");
+                                System.out.println("You get some time to recuperate, but before you know it, the dog is coming at you again.");
+                                System.out.println("You get + 30 health, making you have " + atom.getHealth() + " health remaining");
+                                System.out.println("The dog also lost -30 health, making it have " + dog.getHealth() + " health remaining");
+                                int tempHealth = atom.getHealth() + 30;
+                                atom.setHealth(tempHealth);
+                                int dogHealth = dog.getHealth() - 30;
+                                dog.setHealth(dogHealth);
                             default:
                                 System.out.println("Incorrect input, try again.");
                                 break;
