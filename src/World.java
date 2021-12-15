@@ -18,7 +18,6 @@ public class World {
 
 
         while (battleOn) {
-
             Random a = new Random();
             int enumber = a.nextInt(5) + 1;
 
@@ -28,7 +27,11 @@ public class World {
             Random t = new Random();
             int ToonGen = t.nextInt(10) + 1;
 
+            int ItemDrop = t.nextInt(2)+1;
+
+
             if (enumber <= 2) {
+
                 System.out.println("An fly is approaching!");
                 System.out.println("Choose an option (1-3): ");
                 System.out.println("1. Attack");
@@ -38,6 +41,7 @@ public class World {
                 userInput = bScan.nextInt();
 
                 switch (userInput) {
+
                     case 1:
                         System.out.println("What type of attack would you like to use?");
                         System.out.println("1. Regular");
@@ -60,10 +64,13 @@ public class World {
                                         System.out.println(" ");
                                         int tempTL1 = atom.getToonieLevel() +1;
                                         atom.setToonieLevel(tempTL1);
-                                        break;
-                                    } else {
-                                        break;
+                                    } if (ItemDrop == 1) {
+                                        System.out.println("You found a fly wing!");
+                                        System.out.println(" ");
+                                        int FW = atom.getFlyWing() + 1;
+                                        atom.setFlyWing(FW);
                                     }
+                                    break;
                                 }
 
                             case 2:
@@ -87,10 +94,14 @@ public class World {
                                         System.out.println(" ");
                                         int tempTl3 = atom.getToonieLevel() + 1;
                                         atom.setToonieLevel(tempTl3);
-                                        break;
-                                    } else {
-                                        break;
                                     }
+                                    if (ItemDrop == 1) {
+                                        System.out.println("You found a fly wing!");
+                                        System.out.println(" ");
+                                        int FW = atom.getFlyWing() + 1;
+                                        atom.setFlyWing(FW);
+                                    }
+                                    break;
                                 } else {
                                     System.out.println("The fly now has " + fly.getHealth() + " health remaining");
                                     System.out.println(" ");
@@ -164,10 +175,14 @@ public class World {
                                         System.out.println(" ");
                                         int tempTL = atom.getToonieLevel() + 1;
                                         atom.setToonieLevel(tempTL);
-                                        break;
+                                    } if (ItemDrop == 1) {
+                                        System.out.println("You found a rat tail!");
+                                        System.out.println(" ");
+                                        int RT = atom.getRatTail() + 1;
+                                        atom.setRatTail(RT);
                                     }
+                                        break;
                                 }
-
                             case 2:
                                 if (atom.getmagLevel() < 3) {
                                     System.out.println("You do not have enough Magic Power to complete this move.");
@@ -195,8 +210,13 @@ public class World {
                                         System.out.println(" ");
                                         int tempTL2 = atom.getToonieLevel() + 1;
                                         atom.setToonieLevel(tempTL2);
-                                        break;
+                                    } if (ItemDrop == 1) {
+                                        System.out.println("You found a rat tail!");
+                                        System.out.println(" ");
+                                        int RT = atom.getRatTail() + 1;
+                                        atom.setRatTail(RT);
                                     }
+                                        break;
                                 } else {
                                     System.out.println("The rat now has " + rat.getHealth() + " health remaining");
                                     System.out.println(" ");
@@ -263,7 +283,7 @@ public class World {
                                     if (ToonGen <= 7) {
                                         System.out.println("You have earned 3 Toonies!");
                                         System.out.println(" ");
-                                        int tempTL1 = atom.getToonieLevel() +3;
+                                        int tempTL1 = atom.getToonieLevel() + 3;
                                         atom.setToonieLevel(tempTL1);
                                         break;
                                     } else if (ToonGen <= 8) {
@@ -277,7 +297,12 @@ public class World {
                                         System.out.println(" ");
                                         int tempTL1 = atom.getToonieLevel() + 1;
                                         atom.setToonieLevel(tempTL1);
-                                        break;
+                                    }
+                                    if (ItemDrop == 1) {
+                                        System.out.println("You found a rat tail!");
+                                        System.out.println(" ");
+                                        int SE = atom.getSpiderEye() + 1;
+                                        atom.setSpiderEye(SE);
                                     }
                                 }
 
@@ -303,9 +328,14 @@ public class World {
                                         int tempTL4 = atom.getToonieLevel() + 1;
                                         atom.setToonieLevel(tempTL4);
                                         break;
-                                    } else {
-                                        break;
                                     }
+                                    if (ItemDrop == 1) {
+                                        System.out.println("You found a rat tail!");
+                                        System.out.println(" ");
+                                        int SE = atom.getSpiderEye() + 1;
+                                        atom.setSpiderEye(SE);
+                                    }
+                                    break;
                                 } else {
                                     System.out.println("The spider now has " + spider.getHealth() + " health remaining");
                                     System.out.println(" ");

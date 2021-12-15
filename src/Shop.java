@@ -322,7 +322,7 @@ public class Shop {
                                     }
                                 }
                             } else if (ShopDisplay[0] == "Fly Swatter - Deals 30 damage (45 critical) - 5 FLY WINGS") {
-                                if (atom.getToonieLevel() < 5) {
+                                if (atom.getFlyWing() < 5) {
                                     System.out.println("You do not have enough Fly Wings to buy this.");
                                     System.out.println(" ");
                                     System.out.println("Would you like to buy something else? 1 = yes, 2 = no");
@@ -336,8 +336,8 @@ public class Shop {
                                     }
                                 } else {
                                     System.out.println("You have bought a Fly Swatter!");
-                                    int tempTL = atom.getToonieLevel() - 5;
-                                    atom.setToonieLevel(tempTL);
+                                    int tempTL = atom.getFlyWing() - 5;
+                                    atom.setFlyWing(tempTL);
                                     for (int b = 0; b < 10; i++) {
                                         if (atom.inventory[b] == null) {
                                             atom.inventory[b] = ("Fly Swatter");
@@ -368,7 +368,7 @@ public class Shop {
                                     }
                                 }
                             } else if (ShopDisplay[0] == "Rat Poison - Deals 40 damage (60 critical) - 5 RAT TAILS") {
-                                if (atom.getToonieLevel() < 5) {
+                                if (atom.getRatTail() < 5) {
                                     System.out.println("You do not have enough Rat Tails to buy this.");
                                     System.out.println(" ");
                                     System.out.println("Would you like to buy something else? 1 = yes, 2 = no");
@@ -382,8 +382,8 @@ public class Shop {
                                     }
                                 } else {
                                     System.out.println("You have bought Rat Poison!");
-                                    int tempTL = atom.getToonieLevel() - 5;
-                                    atom.setToonieLevel(tempTL);
+                                    int tempTL = atom.getRatTail() - 5;
+                                    atom.setRatTail(tempTL);
                                     for (int b = 0; b < 10; i++) {
                                         if (atom.inventory[b] == null) {
                                             atom.inventory[b] = ("Rat Poison");
@@ -414,7 +414,7 @@ public class Shop {
                                     }
                                 }
                             } else if (ShopDisplay[0] == "Spider Web - Deals 50 damage (75 critical) - 5 SPIDER EYES") {
-                                if (atom.getToonieLevel() < 5) {
+                                if (atom.getSpiderEye() < 5) {
                                     System.out.println("You do not have enough Spider Eyes to buy this.");
                                     System.out.println(" ");
                                     System.out.println("Would you like to buy something else? 1 = yes, 2 = no");
@@ -428,8 +428,8 @@ public class Shop {
                                     }
                                 } else {
                                     System.out.println("You have bought a Spider Web!");
-                                    int tempTL = atom.getToonieLevel() - 5;
-                                    atom.setToonieLevel(tempTL);
+                                    int tempTL = atom.getSpiderEye() - 5;
+                                    atom.setSpiderEye(tempTL);
                                     for (int b = 0; b < 10; i++) {
                                         if (atom.inventory[b] == null) {
                                             atom.inventory[b] = ("Spider Web");
@@ -728,12 +728,12 @@ public class Shop {
                                     }
                                 }
                             } else if (ShopDisplay[1] == "Fly Swatter - Deals 30 damage (45 critical) - 5 FLY WINGS") {
-                                if (atom.getToonieLevel() < 5) {
+                                if (atom.getFlyWing() < 5) {
                                     System.out.println("You do not have enough Fly Wings to buy this.");
                                 } else {
                                     System.out.println("You have bought a Fly Swatter!");
-                                    int tempTL = atom.getToonieLevel() - 5;
-                                    atom.setToonieLevel(tempTL);
+                                    int tempTL = atom.getFlyWing() - 5;
+                                    atom.setFlyWing(tempTL);
                                     for (int b = 0; b < 10; i++) {
                                         if (atom.inventory[b] == null) {
                                             atom.inventory[b] = ("Fly Swatter");
@@ -744,12 +744,12 @@ public class Shop {
                                     }
                                 }
                             } else if (ShopDisplay[1] == "Rat Poison - Deals 40 damage (60 critical) - 5 RAT TAILS") {
-                                if (atom.getToonieLevel() < 5) {
+                                if (atom.getRatTail() < 5) {
                                     System.out.println("You do not have enough Rat Tails to buy this.");
                                 } else {
                                     System.out.println("You have bought Rat Poison!");
-                                    int tempTL = atom.getToonieLevel() - 5;
-                                    atom.setToonieLevel(tempTL);
+                                    int tempTL = atom.getRatTail() - 5;
+                                    atom.setRatTail(tempTL);
                                     for (int b = 0; b < 10; i++) {
                                         if (atom.inventory[b] == null) {
                                             atom.inventory[b] = ("Rat Poison");
@@ -760,12 +760,12 @@ public class Shop {
                                     }
                                 }
                             } else if (ShopDisplay[1] == "Spider Web - Deals 50 damage (75 critical) - 5 SPIDER EYES") {
-                                if (atom.getToonieLevel() < 5) {
+                                if (atom.getSpiderEye() < 5) {
                                     System.out.println("You do not have enough Spider Eyes to buy this.");
                                 } else {
                                     System.out.println("You have bought a Spider Web!");
-                                    int tempTL = atom.getToonieLevel() - 5;
-                                    atom.setToonieLevel(tempTL);
+                                    int tempTL = atom.getSpiderEye() - 5;
+                                    atom.setSpiderEye(tempTL);
                                     for (int b = 0; b < 10; i++) {
                                         if (atom.inventory[b] == null) {
                                             atom.inventory[b] = ("Spider Web");
@@ -1000,7 +1000,7 @@ public class Shop {
                                     }
                                 }
                             } else if (ShopDisplay[2] == "Fly Swatter - Deals 30 damage (45 critical) - 5 FLY WINGS") {
-                                if (atom.getToonieLevel() < 5) {
+                                if (atom.getFlyWing() < 5) {
                                     System.out.println("You do not have enough Fly Wings to buy this.");
                                     System.out.println(" ");
                                     System.out.println("Would you like to buy something else? 1 = yes, 2 = no");
@@ -1014,8 +1014,8 @@ public class Shop {
                                     }
                                 } else {
                                     System.out.println("You have bought a Fly Swatter!");
-                                    int tempTL = atom.getToonieLevel() - 5;
-                                    atom.setToonieLevel(tempTL);
+                                    int tempTL = atom.getFlyWing() - 5;
+                                    atom.setFlyWing(tempTL);
                                     for (int b = 0; b < 10; i++) {
                                         if (atom.inventory[b] == null) {
                                             atom.inventory[b] = ("Fly Swatter");
@@ -1036,12 +1036,12 @@ public class Shop {
                                     }
                                 }
                             } else if (ShopDisplay[2] == "Rat Poison - Deals 40 damage (60 critical) - 5 RAT TAILS") {
-                                if (atom.getToonieLevel() < 5) {
+                                if (atom.getRatTail() < 5) {
                                     System.out.println("You do not have enough Rat Tails to buy this.");
                                 } else {
                                     System.out.println("You have bought Rat Poison!");
-                                    int tempTL = atom.getToonieLevel() - 5;
-                                    atom.setToonieLevel(tempTL);
+                                    int tempTL = atom.getRatTail() - 5;
+                                    atom.setRatTail(tempTL);
                                     for (int b = 0; b < 10; i++) {
                                         if (atom.inventory[b] == null) {
                                             atom.inventory[b] = ("Rat Poison");
@@ -1052,7 +1052,7 @@ public class Shop {
                                     }
                                 }
                             } else if (ShopDisplay[2] == "Spider Web - Deals 50 damage (75 critical) - 5 SPIDER EYES") {
-                                if (atom.getToonieLevel() < 5) {
+                                if (atom.getSpiderEye() < 5) {
                                     System.out.println("You do not have enough Spider Eyes to buy this.");
                                     System.out.println(" ");
                                     System.out.println("Would you like to buy something else? 1 = yes, 2 = no");
@@ -1066,8 +1066,8 @@ public class Shop {
                                     }
                                 } else {
                                     System.out.println("You have bought a Spider Web!");
-                                    int tempTL = atom.getToonieLevel() - 5;
-                                    atom.setToonieLevel(tempTL);
+                                    int tempTL = atom.getSpiderEye() - 5;
+                                    atom.setSpiderEye(tempTL);
                                     for (int b = 0; b < 10; i++) {
                                         if (atom.inventory[b] == null) {
                                             atom.inventory[b] = ("Spider Web");
