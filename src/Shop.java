@@ -665,7 +665,7 @@ public class Shop {
                                         break;
                                     }
                                 } else {
-                                    System.out.println("You have bought a MEGA Health potion!");
+                                    System.out.println("You have bought a Potion of MEGA Health");
                                     int tempTL = atom.getToonieLevel() - 50;
                                     atom.setToonieLevel(tempTL);
                                     for (int b = 0; b < 10; i++) {
