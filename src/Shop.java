@@ -7,7 +7,7 @@ public class Shop {
     Shop() {
 
     }
-
+    //Shop text for when you open it
     void visitTheShop(Hero atom) {
         boolean shopOn = true;
         boolean keepShopping = false;
@@ -34,6 +34,7 @@ public class Shop {
                 i++;
             }
         }
+        //Shop text intro
         while (shopOn) {
 
             System.out.println("Hello there, dear! I'm Auntie Ant, and welcome to Auntie Ant's Antiques!");
@@ -43,6 +44,7 @@ public class Shop {
             userInput = scan.nextInt();
 
             if (userInput == 1) {
+                //Displays items for sale
 
                 keepShopping = true;
                 while (keepShopping) {

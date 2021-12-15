@@ -28,6 +28,7 @@ public class Enemy {
         }
     }
 
+    //Methods
     public int getHealth() {
         return health;
     }

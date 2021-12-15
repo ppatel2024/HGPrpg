@@ -31,6 +31,7 @@ public class GameRunner {
         boolean alive = true;
         boolean gameOn = true;
 
+        //Game intro
 
         System.out.println("Welcome to the Tale of the Oversized Atom!");
         System.out.println(" ");
@@ -39,7 +40,7 @@ public class GameRunner {
         System.out.println("You hear your mother call your name from the kitchen 'Atom!' ");
         System.out.println("You crawl out of your bed after sprinting off, nearly breaking your bones and you enter a world of evil");
 
-        //main menu loop
+        //Main menu loop
         while (gameOn) {
             while (alive) {
 
@@ -83,6 +84,7 @@ public class GameRunner {
                     }
                 }
             }
+            //Death menu
             System.out.println("Game over! Would you like to play again? (1 - yes, 2 - no)");
 
             int userInput1 = scan.nextInt();

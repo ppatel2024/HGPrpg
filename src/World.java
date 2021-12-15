@@ -21,7 +21,7 @@ public class World {
         int i = 0;
         int arrayRemove = atom.inventory.length;
 
-
+        //Encounters
         while (battleOn) {
             Random a = new Random();
             int enumber = a.nextInt(8) + 1;
@@ -36,7 +36,7 @@ public class World {
 
 
             if (enumber <= 2) {
-
+        //Battle menu
                 System.out.println("An fly is approaching!");
                 System.out.println("Choose an option (1-3): ");
                 System.out.println("1. Attack");
@@ -46,7 +46,7 @@ public class World {
                 userInput = bScan.nextInt();
                 switch (userInput) {
 
-
+                    //Attack menu
                     case 1:
                         System.out.println("What type of attack would you like to use? (Choose an option 1-7)");
                         System.out.println("1. Regular");
@@ -80,7 +80,7 @@ public class World {
 
 
                         userInput = bScan.nextInt();
-
+                //Enemy death
                         switch (userInput) {
                             case 1:
                                 if (AttackPotionNumber > 0) {
@@ -156,6 +156,7 @@ public class World {
                                             int FW = atom.getFlyWing() + 1;
                                             atom.setFlyWing(FW);
                                         }
+                                        //Enemy Attack
                                     } else {
                                         System.out.println("The fly now has " + fly.getHealth() + " health remaining");
                                         System.out.println(" ");
@@ -1502,6 +1503,7 @@ public class World {
                         break;
                 }
                 break;
+                //Encounters
             } else if (enumber == 6) {
                 System.out.println("You find a cake crumb on the floor, leftover from your little brother's birthday party!");
                 System.out.println("You eat it and get +30 health!");
