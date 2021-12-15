@@ -20,8 +20,8 @@ public class GameRunner {
         //Health 20, Attack 10,
         //10% chance of spawn, 30% chance of item drop, 70% chance of dropping coins (3)
         Enemy dog = new Enemy();
-        dog.setHealth(100);
-        dog.setAttackPower(30);
+        dog.setHealth(200);
+        dog.setAttackPower(40);
         //FINAL BOSS
         //Health 100, Attack 30
         World w = new World();
