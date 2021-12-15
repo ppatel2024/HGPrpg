@@ -34,32 +34,32 @@ public class Hero {
         int tempH = e.getHealth() - 5;
         e.setHealth(tempH);
     }
-
+    //Magic Attack
     void magAttack(Enemy e) { //e BECOMES e1, or e2, or e3
         int tempH = e.getHealth() - 30;
         e.setHealth(tempH);
     }
-
+    //Toothpick Weapon
     void toothpickAttack(Enemy e) {
         int tempH = e.getHealth() - 10;
         e.setHealth(tempH);
     }
-
+    //Staple Weapon
     void stapleAttack(Enemy e) {
         int tempH = e.getHealth() - 15;
         e.setHealth(tempH);
     }
-
+    //Fly Swatter Weapon
     void flySwatterAttack(Enemy e) {
         int tempH = e.getHealth() - 30;
         e.setHealth(tempH);
     }
-
+    //Rat Poison Weapon
     void ratPoisonAttack(Enemy e) {
         int tempH = e.getHealth() - 40;
         e.setHealth(tempH);
     }
-
+    //Spiderweb Weapon
     void spiderWebAttack(Enemy e) {
         int tempH = e.getHealth() - 50;
         e.setHealth(tempH);
