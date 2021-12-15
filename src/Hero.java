@@ -11,7 +11,12 @@ public class Hero {
     private int ratTail;
     private int spiderEye;
     private int flyWing;
+    private int HeroLevel;
 
+
+    public Hero(int heroLevel) {
+        HeroLevel = heroLevel;
+    }
 
     //Constructor
     Hero() {
@@ -20,6 +25,8 @@ public class Hero {
         this.inventory[0] = null;
         this.magLevel = 0;
         this.toonieLevel = 0;
+        this.HeroLevel = 0;
+
     }
 
     //Helper Method
@@ -117,6 +124,14 @@ public class Hero {
 
     public int getFlyWing() {
         return flyWing;
+    }
+
+    public int getHeroLevel() {
+        return HeroLevel;
+    }
+
+    public void setHeroLevel(int heroLevel) {
+        HeroLevel = heroLevel;
     }
 
     public void setFlyWing(int flyWing) {

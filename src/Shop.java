@@ -262,6 +262,8 @@ public class Shop {
                                     System.out.println("You have bought a MEGA Health potion!");
                                     int tempTL = atom.getToonieLevel() - 50;
                                     atom.setToonieLevel(tempTL);
+                                    int tempHL = atom.getHeroLevel() + 1;
+                                    atom.setHeroLevel(tempHL);
                                     for (int b = 0; b < 10; i++) {
                                         if (atom.inventory[b] == null) {
                                             atom.inventory[b] = ("Potion of MEGA Health");
@@ -432,6 +434,8 @@ public class Shop {
                                     System.out.println("You have bought a Spider Web!");
                                     int tempTL = atom.getSpiderEye() - 5;
                                     atom.setSpiderEye(tempTL);
+                                    int tempHL = atom.getHeroLevel() + 1;
+                                    atom.setHeroLevel(tempHL);
                                     for (int b = 0; b < 10; i++) {
                                         if (atom.inventory[b] == null) {
                                             atom.inventory[b] = ("Spider Web");
