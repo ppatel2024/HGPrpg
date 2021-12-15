@@ -8,6 +8,10 @@ public class Hero {
     private String name;
     public String[] inventory = new String[10];
     private int toonieLevel;
+    private int ratTail;
+    private int spiderEye;
+    private int flyWing;
+
 
     //Constructor
     Hero() {
@@ -15,7 +19,7 @@ public class Hero {
         this.name = "Atom";
         this.inventory[0] = null;
         this.magLevel = 0;
-        this.toonieLevel = 0;
+        this.toonieLevel = 50;
     }
 
     //Helper Method
@@ -53,6 +57,7 @@ public class Hero {
         public void setInventory (String[]inventory){
             this.inventory = inventory;
         }
+
         public int getmagLevel () {
             return magLevel;
         }
@@ -69,6 +74,32 @@ public class Hero {
             this.toonieLevel = toonieLevel;
         }
 
+    public int getRatTail () {
+        return ratTail;
+    }
+
+    public void setRatTail ( int ratTail){
+        this.ratTail = ratTail;
+    }
+
+    public int getSpiderEye() {
+        return spiderEye;
+    }
+
+    public void setSpiderEye(int spiderEye) {
+        this.spiderEye = spiderEye;
+    }
+
+    public int getFlyWing() {
+        return flyWing;
+    }
+
+    public void setFlyWing(int flyWing) {
+        this.flyWing = flyWing;
+    }
+
+
+
         @Override
         public String toString () {
             return
@@ -77,10 +108,14 @@ public class Hero {
             "Health:" + health +
             " | " +
             "Magic Level:" + magLevel +
-            " | " +
+            " | " + "\n" +
                             "Toonies: " + toonieLevel +
                             " | " +
-            "Inventory:" + Arrays.toString(inventory);
+                            "Fly Wings: " + flyWing +" | " +
+                            "Rat Tails: " + ratTail + " | " +
+                            "Spider Eyes: " + spiderEye + " | " + "\n" +
+            "Inventory:" + Arrays.toString(inventory) + "\n";
+
 
         }
     }
