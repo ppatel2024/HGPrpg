@@ -19,17 +19,42 @@ public class Hero {
         this.name = "Atom";
         this.inventory[0] = null;
         this.magLevel = 0;
-        this.toonieLevel = 50;
+        this.toonieLevel = 0;
     }
 
     //Helper Method
     void attack(Enemy e) { //e BECOMES e1, or e2, or e3
-        int tempH = e.getHealth() - 10;
+        int tempH = e.getHealth() - 5;
         e.setHealth(tempH);
     }
 
     void magAttack(Enemy e) { //e BECOMES e1, or e2, or e3
         int tempH = e.getHealth() - 30;
+        e.setHealth(tempH);
+    }
+
+    void toothpickAttack(Enemy e) {
+        int tempH = e.getHealth() - 10;
+        e.setHealth(tempH);
+    }
+
+    void stapleAttack(Enemy e) {
+        int tempH = e.getHealth() - 15;
+        e.setHealth(tempH);
+    }
+
+    void flySwatterAttack(Enemy e) {
+        int tempH = e.getHealth() - 30;
+        e.setHealth(tempH);
+    }
+
+    void ratPoisonAttack(Enemy e) {
+        int tempH = e.getHealth() - 40;
+        e.setHealth(tempH);
+    }
+
+    void spiderWebAttack(Enemy e) {
+        int tempH = e.getHealth() - 50;
         e.setHealth(tempH);
     }
         //Methods

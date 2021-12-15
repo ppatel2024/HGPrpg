@@ -13,13 +13,15 @@ public class Shop {
         boolean keepShopping = false;
         Scanner scan = new Scanner(System.in);
         int userInput;
-        String[] ShopInventory = {"Toothpick - Deals 10 damage (15 critical) - 10 TOONIES",
-                "Staple - Deals 15 damage (20 critical) - 15 TOONIES",
+        String[] ShopInventory = {"Toothpick - Deals 10 damage - 10 TOONIES",
+                "Staple - Deals 15 damage - 15 TOONIES",
                 "Attack Potion - 2x damage for 1 turn - 5 TOONIES",
                 "Healing Potion - Gives you 30 health - 3 TOONIES",
                 "Potion of MEGA Health - Gives you 500 Health - 50 TOONIES",
-                "Secret *Shhhh* - 25 TOONIES", "Fly Swatter - Deals 30 damage (45 critical) - 5 FLY WINGS",
-                "Rat Poison - Deals 40 damage (60 critical) - 5 RAT TAILS", "Spider Web - Deals 50 damage (75 critical) - 5 SPIDER EYES"};
+                "Secret *Shhhh* - 25 TOONIES",
+                "Fly Swatter - Deals 30 damage - 5 FLY WINGS",
+                "Rat Poison - Deals 40 damage - 5 RAT TAILS",
+                "Spider Web - Deals 50 damage - 5 SPIDER EYES"};
         String[] ShopDisplay = new String[5];
         Random r = new Random();
         int i = 0;
@@ -59,7 +61,7 @@ public class Shop {
                     //Shop Display 0
                     switch (userInput) {
                         case 1:
-                            if (ShopDisplay[0] == "Toothpick - Deals 10 damage (15 critical) - 10 TOONIES") {
+                            if (ShopDisplay[0] == "Toothpick - Deals 10 damage - 10 TOONIES") {
                                 if (atom.getToonieLevel() < 10) {
                                     System.out.println("You do not have enough Toonies to buy this.");
                                     System.out.println(" ");
@@ -105,7 +107,7 @@ public class Shop {
                                         break;
                                     }
                                 }
-                            } else if (ShopDisplay[0] == "Staple - Deals 15 damage (20 critical) - 15 TOONIES") {
+                            } else if (ShopDisplay[0] == "Staple - Deals 15 damage - 15 TOONIES") {
                                 if (atom.getToonieLevel() < 15) {
                                     System.out.println("You do not have enough Toonies to buy this.");
                                     System.out.println(" ");
@@ -321,7 +323,7 @@ public class Shop {
                                         break;
                                     }
                                 }
-                            } else if (ShopDisplay[0] == "Fly Swatter - Deals 30 damage (45 critical) - 5 FLY WINGS") {
+                            } else if (ShopDisplay[0] == "Fly Swatter - Deals 30 damage - 5 FLY WINGS") {
                                 if (atom.getFlyWing() < 5) {
                                     System.out.println("You do not have enough Fly Wings to buy this.");
                                     System.out.println(" ");
@@ -367,7 +369,7 @@ public class Shop {
                                         break;
                                     }
                                 }
-                            } else if (ShopDisplay[0] == "Rat Poison - Deals 40 damage (60 critical) - 5 RAT TAILS") {
+                            } else if (ShopDisplay[0] == "Rat Poison - Deals 40 damage - 5 RAT TAILS") {
                                 if (atom.getRatTail() < 5) {
                                     System.out.println("You do not have enough Rat Tails to buy this.");
                                     System.out.println(" ");
@@ -413,7 +415,7 @@ public class Shop {
                                         break;
                                     }
                                 }
-                            } else if (ShopDisplay[0] == "Spider Web - Deals 50 damage (75 critical) - 5 SPIDER EYES") {
+                            } else if (ShopDisplay[0] == "Spider Web - Deals 50 damage - 5 SPIDER EYES") {
                                 if (atom.getSpiderEye() < 5) {
                                     System.out.println("You do not have enough Spider Eyes to buy this.");
                                     System.out.println(" ");
@@ -462,7 +464,7 @@ public class Shop {
                                 }
                             }
                         case 2:
-                            if (ShopDisplay[1] == "Toothpick - Deals 10 damage (15 critical) - 10 TOONIES") {
+                            if (ShopDisplay[1] == "Toothpick - Deals 10 damage - 10 TOONIES") {
                                 if (atom.getToonieLevel() < 10) {
                                     System.out.println("You do not have enough Toonies to buy this.");
                                     System.out.println(" ");
@@ -509,7 +511,7 @@ public class Shop {
                                         break;
                                     }
                                 }
-                            } else if (ShopDisplay[1] == "Staple - Deals 15 damage (20 critical) - 15 TOONIES") {
+                            } else if (ShopDisplay[1] == "Staple - Deals 15 damage - 15 TOONIES") {
                                 if (atom.getToonieLevel() < 15) {
                                     System.out.println("You do not have enough Toonies to buy this.");
                                     System.out.println(" ");
@@ -727,7 +729,7 @@ public class Shop {
                                         break;
                                     }
                                 }
-                            } else if (ShopDisplay[1] == "Fly Swatter - Deals 30 damage (45 critical) - 5 FLY WINGS") {
+                            } else if (ShopDisplay[1] == "Fly Swatter - Deals 30 damage - 5 FLY WINGS") {
                                 if (atom.getFlyWing() < 5) {
                                     System.out.println("You do not have enough Fly Wings to buy this.");
                                 } else {
@@ -743,7 +745,7 @@ public class Shop {
                                         }
                                     }
                                 }
-                            } else if (ShopDisplay[1] == "Rat Poison - Deals 40 damage (60 critical) - 5 RAT TAILS") {
+                            } else if (ShopDisplay[1] == "Rat Poison - Deals 40 damage - 5 RAT TAILS") {
                                 if (atom.getRatTail() < 5) {
                                     System.out.println("You do not have enough Rat Tails to buy this.");
                                 } else {
@@ -759,7 +761,7 @@ public class Shop {
                                         }
                                     }
                                 }
-                            } else if (ShopDisplay[1] == "Spider Web - Deals 50 damage (75 critical) - 5 SPIDER EYES") {
+                            } else if (ShopDisplay[1] == "Spider Web - Deals 50 damage - 5 SPIDER EYES") {
                                 if (atom.getSpiderEye() < 5) {
                                     System.out.println("You do not have enough Spider Eyes to buy this.");
                                 } else {
@@ -777,7 +779,7 @@ public class Shop {
                                 }
                             }
                         case 3:
-                            if (ShopDisplay[2] == "Toothpick - Deals 10 damage (15 critical) - 10 TOONIES") {
+                            if (ShopDisplay[2] == "Toothpick - Deals 10 damage - 10 TOONIES") {
                                 if (atom.getToonieLevel() < 10) {
                                     System.out.println("You do not have enough Toonies to buy this.");
                                     System.out.println(" ");
@@ -823,7 +825,7 @@ public class Shop {
                                         break;
                                     }
                                 }
-                            } else if (ShopDisplay[2] == "Staple - Deals 15 damage (20 critical) - 15 TOONIES") {
+                            } else if (ShopDisplay[2] == "Staple - Deals 15 damage - 15 TOONIES") {
                                 if (atom.getToonieLevel() < 15) {
                                     System.out.println("You do not have enough Toonies to buy this.");
                                     System.out.println(" ");
@@ -999,7 +1001,7 @@ public class Shop {
                                         break;
                                     }
                                 }
-                            } else if (ShopDisplay[2] == "Fly Swatter - Deals 30 damage (45 critical) - 5 FLY WINGS") {
+                            } else if (ShopDisplay[2] == "Fly Swatter - Deals 30 damage - 5 FLY WINGS") {
                                 if (atom.getFlyWing() < 5) {
                                     System.out.println("You do not have enough Fly Wings to buy this.");
                                     System.out.println(" ");
@@ -1035,7 +1037,7 @@ public class Shop {
                                         }
                                     }
                                 }
-                            } else if (ShopDisplay[2] == "Rat Poison - Deals 40 damage (60 critical) - 5 RAT TAILS") {
+                            } else if (ShopDisplay[2] == "Rat Poison - Deals 40 damage - 5 RAT TAILS") {
                                 if (atom.getRatTail() < 5) {
                                     System.out.println("You do not have enough Rat Tails to buy this.");
                                 } else {
@@ -1051,7 +1053,7 @@ public class Shop {
                                         }
                                     }
                                 }
-                            } else if (ShopDisplay[2] == "Spider Web - Deals 50 damage (75 critical) - 5 SPIDER EYES") {
+                            } else if (ShopDisplay[2] == "Spider Web - Deals 50 damage - 5 SPIDER EYES") {
                                 if (atom.getSpiderEye() < 5) {
                                     System.out.println("You do not have enough Spider Eyes to buy this.");
                                     System.out.println(" ");
