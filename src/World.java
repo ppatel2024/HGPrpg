@@ -24,7 +24,7 @@ public class World {
 
         while (battleOn) {
             Random a = new Random();
-            int enumber = a.nextInt(5) + 1;
+            int enumber = a.nextInt(8) + 1;
 
             Random h = new Random();
             int healPoint = h.nextInt(5) + 5;
@@ -86,7 +86,7 @@ public class World {
                                 if (AttackPotionNumber > 0) {
                                     atom.attack(fly);
                                     atom.attack(fly);
-                                    AttackPotionNumber = AttackPotionNumber -1;
+                                    AttackPotionNumber = AttackPotionNumber - 1;
                                 } else {
                                     atom.attack(fly);
                                 }
@@ -131,7 +131,7 @@ public class World {
                                     if (AttackPotionNumber > 0) {
                                         atom.magAttack(fly);
                                         atom.magAttack(fly);
-                                        AttackPotionNumber = AttackPotionNumber -1;
+                                        AttackPotionNumber = AttackPotionNumber - 1;
                                     } else {
                                         atom.magAttack(fly);
                                     }
@@ -177,7 +177,7 @@ public class World {
                                     if (AttackPotionNumber > 0) {
                                         atom.toothpickAttack(fly);
                                         atom.toothpickAttack(fly);
-                                        AttackPotionNumber = AttackPotionNumber - 1 ;
+                                        AttackPotionNumber = AttackPotionNumber - 1;
                                     } else {
                                         atom.toothpickAttack(fly);
                                     }
@@ -222,7 +222,7 @@ public class World {
                                     if (AttackPotionNumber > 0) {
                                         atom.stapleAttack(fly);
                                         atom.stapleAttack(fly);
-                                        AttackPotionNumber = AttackPotionNumber -1;
+                                        AttackPotionNumber = AttackPotionNumber - 1;
                                     } else {
                                         atom.attack(fly);
                                     }
@@ -267,10 +267,10 @@ public class World {
                                     if (AttackPotionNumber > 0) {
                                         atom.flySwatterAttack(fly);
                                         atom.flySwatterAttack(fly);
-                                        AttackPotionNumber = AttackPotionNumber -1;
+                                        AttackPotionNumber = AttackPotionNumber - 1;
                                     } else {
                                         atom.flySwatterAttack(fly);
-                                }
+                                    }
                                     if (fly.getHealth() <= 0) {
                                         System.out.println("You have killed the fly!");
                                         System.out.println(" ");
@@ -313,7 +313,7 @@ public class World {
                                     if (AttackPotionNumber > 0) {
                                         atom.ratPoisonAttack(fly);
                                         atom.ratPoisonAttack(fly);
-                                        AttackPotionNumber = AttackPotionNumber -1;
+                                        AttackPotionNumber = AttackPotionNumber - 1;
                                     } else {
                                         atom.ratPoisonAttack(fly);
                                     }
@@ -359,7 +359,7 @@ public class World {
                                     if (AttackPotionNumber > 0) {
                                         atom.spiderWebAttack(fly);
                                         atom.spiderWebAttack(fly);
-                                        AttackPotionNumber = AttackPotionNumber -1;
+                                        AttackPotionNumber = AttackPotionNumber - 1;
                                     } else {
                                         atom.spiderWebAttack(fly);
                                     }
@@ -422,11 +422,11 @@ public class World {
                             System.out.println("4. ");
                         }
 
-                            userInput = bScan.nextInt();
+                        userInput = bScan.nextInt();
 
-                            switch (userInput) {
-                                case 1:
-                                    if (healthNumber <= 3) {
+                        switch (userInput) {
+                            case 1:
+                                if (healthNumber <= 3) {
                                     System.out.println("You got " + healPoint + " health!");
                                     int moreHealth = atom.getHealth() + healPoint;
                                     atom.setHealth(moreHealth);
@@ -437,59 +437,59 @@ public class World {
                                 } else {
                                     System.out.println("You have run out of free health. Try again later!");
                                 }
-                                    break;
-                                case 2:
-                                    if (Arrays.asList(atom.inventory).contains("Attack Potion")) {
-                                        AttackPotionNumber++;
-                                        while (i < arrayRemove) {
-                                            if (atom.inventory[i] == "Attack Potion") {
-                                                atom.inventory[i] = null;
-                                                i = 0;
-                                            } else {
-                                                i++;
-                                            }
+                                break;
+                            case 2:
+                                if (Arrays.asList(atom.inventory).contains("Attack Potion")) {
+                                    AttackPotionNumber++;
+                                    while (i < arrayRemove) {
+                                        if (atom.inventory[i] == "Attack Potion") {
+                                            atom.inventory[i] = null;
+                                            i = 0;
+                                        } else {
+                                            i++;
                                         }
-                                    } else {
-                                        System.out.println("Incorrect input, try again.");
                                     }
-                                    break;
-                                case 3:
-                                    if (Arrays.asList(atom.inventory).contains("Healing Potion")) {
-                                        int tempHP = atom.getHealth() + 30;
-                                        atom.setHealth(tempHP);
-                                        while (i < arrayRemove) {
-                                            if (atom.inventory[i] == "Healing Potion") {
-                                                atom.inventory[i] = null;
-                                                i = 0;
-                                            } else {
-                                                i++;
-                                            }
-                                        }
-                                    } else {
-                                        System.out.println("Incorrect input, try again.");
-                                    }
-                                    break;
-                                case 4:
-                                    if (Arrays.asList(atom.inventory).contains("Potion of MEGA Health")) {
-                                    int tempMH = atom.getHealth() + 500;
-                                    atom.setHealth(tempMH);
-                                        while (i < arrayRemove) {
-                                            if (atom.inventory[i] == "Potion of MEGA Health") {
-                                                atom.inventory[i] = null;
-                                                i = 0;
-                                            } else {
-                                                i++;
-                                            }
-                                        }
                                 } else {
                                     System.out.println("Incorrect input, try again.");
                                 }
-                                    break;
-                                default:
+                                break;
+                            case 3:
+                                if (Arrays.asList(atom.inventory).contains("Healing Potion")) {
+                                    int tempHP = atom.getHealth() + 30;
+                                    atom.setHealth(tempHP);
+                                    while (i < arrayRemove) {
+                                        if (atom.inventory[i] == "Healing Potion") {
+                                            atom.inventory[i] = null;
+                                            i = 0;
+                                        } else {
+                                            i++;
+                                        }
+                                    }
+                                } else {
                                     System.out.println("Incorrect input, try again.");
-                                    break;
                                 }
                                 break;
+                            case 4:
+                                if (Arrays.asList(atom.inventory).contains("Potion of MEGA Health")) {
+                                    int tempMH = atom.getHealth() + 500;
+                                    atom.setHealth(tempMH);
+                                    while (i < arrayRemove) {
+                                        if (atom.inventory[i] == "Potion of MEGA Health") {
+                                            atom.inventory[i] = null;
+                                            i = 0;
+                                        } else {
+                                            i++;
+                                        }
+                                    }
+                                } else {
+                                    System.out.println("Incorrect input, try again.");
+                                }
+                                break;
+                            default:
+                                System.out.println("Incorrect input, try again.");
+                                break;
+                        }
+                        break;
                     case 3:
                         System.out.println("You have escaped!");
                         System.out.println(" ");
@@ -549,7 +549,7 @@ public class World {
                                 if (AttackPotionNumber > 0) {
                                     atom.attack(rat);
                                     atom.attack(rat);
-                                    AttackPotionNumber = AttackPotionNumber -1;
+                                    AttackPotionNumber = AttackPotionNumber - 1;
                                 } else {
                                     atom.attack(rat);
                                 }
@@ -597,7 +597,7 @@ public class World {
                                     if (AttackPotionNumber > 0) {
                                         atom.magAttack(rat);
                                         atom.magAttack(rat);
-                                        AttackPotionNumber = AttackPotionNumber -1;
+                                        AttackPotionNumber = AttackPotionNumber - 1;
                                     } else {
                                         atom.magAttack(rat);
                                     }
@@ -646,7 +646,7 @@ public class World {
                                     if (AttackPotionNumber > 0) {
                                         atom.toothpickAttack(rat);
                                         atom.toothpickAttack(rat);
-                                        AttackPotionNumber = AttackPotionNumber -1;
+                                        AttackPotionNumber = AttackPotionNumber - 1;
                                     } else {
                                         atom.toothpickAttack(rat);
                                     }
@@ -696,7 +696,7 @@ public class World {
                                     if (AttackPotionNumber > 0) {
                                         atom.stapleAttack(rat);
                                         atom.stapleAttack(rat);
-                                        AttackPotionNumber = AttackPotionNumber -1;
+                                        AttackPotionNumber = AttackPotionNumber - 1;
                                     } else {
                                         atom.stapleAttack(rat);
                                     }
@@ -746,7 +746,7 @@ public class World {
                                     if (AttackPotionNumber > 0) {
                                         atom.flySwatterAttack(rat);
                                         atom.flySwatterAttack(rat);
-                                        AttackPotionNumber = AttackPotionNumber -1;
+                                        AttackPotionNumber = AttackPotionNumber - 1;
                                     } else {
                                         atom.flySwatterAttack(rat);
                                     }
@@ -795,7 +795,7 @@ public class World {
                                     if (AttackPotionNumber > 0) {
                                         atom.ratPoisonAttack(rat);
                                         atom.ratPoisonAttack(rat);
-                                        AttackPotionNumber = AttackPotionNumber -1;
+                                        AttackPotionNumber = AttackPotionNumber - 1;
                                     } else {
                                         atom.ratPoisonAttack(rat);
                                     }
@@ -844,7 +844,7 @@ public class World {
                                     if (AttackPotionNumber > 0) {
                                         atom.spiderWebAttack(rat);
                                         atom.spiderWebAttack(rat);
-                                        AttackPotionNumber = AttackPotionNumber -1;
+                                        AttackPotionNumber = AttackPotionNumber - 1;
                                     } else {
                                         atom.spiderWebAttack(rat);
                                     }
@@ -901,74 +901,74 @@ public class World {
                             System.out.println("4. ");
                         }
 
-                            userInput = bScan.nextInt();
+                        userInput = bScan.nextInt();
 
-                            switch (userInput) {
-                                case 1:
-                                    if (healthNumber <= 3) {
-                                        System.out.println("You got " + healPoint + " health!");
-                                        int moreHealth = atom.getHealth() + healPoint;
-                                        atom.setHealth(moreHealth);
-                                        System.out.println(" ");
-                                        System.out.println("Your health is now: " + atom.getHealth());
-                                        System.out.println(" ");
-                                        healthNumber++;
-                                    } else {
-                                        System.out.println("You have run out of free health. Try again later!");
-                                    }
-                                    break;
-                                case 2:
-                                    if (Arrays.asList(atom.inventory).contains("Attack Potion")) {
-                                        AttackPotionNumber++;
-                                        while (i < arrayRemove) {
-                                            if (atom.inventory[i] == "Attack Potion") {
-                                                atom.inventory[i] = null;
-                                                i = 0;
-                                            } else {
-                                                i++;
-                                            }
+                        switch (userInput) {
+                            case 1:
+                                if (healthNumber <= 3) {
+                                    System.out.println("You got " + healPoint + " health!");
+                                    int moreHealth = atom.getHealth() + healPoint;
+                                    atom.setHealth(moreHealth);
+                                    System.out.println(" ");
+                                    System.out.println("Your health is now: " + atom.getHealth());
+                                    System.out.println(" ");
+                                    healthNumber++;
+                                } else {
+                                    System.out.println("You have run out of free health. Try again later!");
+                                }
+                                break;
+                            case 2:
+                                if (Arrays.asList(atom.inventory).contains("Attack Potion")) {
+                                    AttackPotionNumber++;
+                                    while (i < arrayRemove) {
+                                        if (atom.inventory[i] == "Attack Potion") {
+                                            atom.inventory[i] = null;
+                                            i = 0;
+                                        } else {
+                                            i++;
                                         }
-                                    } else {
-                                        System.out.println("Incorrect input, try again.");
                                     }
-                                    break;
-                                case 3:
-                                    if (Arrays.asList(atom.inventory).contains("Healing Potion")) {
-                                        int tempHP = atom.getHealth() + 30;
-                                        atom.setHealth(tempHP);
-                                        while (i < arrayRemove) {
-                                            if (atom.inventory[i] == "Healing Potion") {
-                                                atom.inventory[i] = null;
-                                                i = 0;
-                                            } else {
-                                                i++;
-                                            }
-                                        }
-                                    } else {
-                                        System.out.println("Incorrect input, try again.");
-                                    }
-                                    break;
-                                case 4:
-                                    if (Arrays.asList(atom.inventory).contains("Potion of MEGA Health")) {
-                                        int tempMH = atom.getHealth() + 500;
-                                        atom.setHealth(tempMH);
-                                        while (i < arrayRemove) {
-                                            if (atom.inventory[i] == "Potion of MEGA Health") {
-                                                atom.inventory[i] = null;
-                                                i = 0;
-                                            } else {
-                                                i++;
-                                            }
-                                        }
-                                    } else {
-                                        System.out.println("Incorrect input, try again.");
-                                    }
-                                    break;
-                                default:
+                                } else {
                                     System.out.println("Incorrect input, try again.");
-                                    break;
-                            }
-                            break;
+                                }
+                                break;
+                            case 3:
+                                if (Arrays.asList(atom.inventory).contains("Healing Potion")) {
+                                    int tempHP = atom.getHealth() + 30;
+                                    atom.setHealth(tempHP);
+                                    while (i < arrayRemove) {
+                                        if (atom.inventory[i] == "Healing Potion") {
+                                            atom.inventory[i] = null;
+                                            i = 0;
+                                        } else {
+                                            i++;
+                                        }
+                                    }
+                                } else {
+                                    System.out.println("Incorrect input, try again.");
+                                }
+                                break;
+                            case 4:
+                                if (Arrays.asList(atom.inventory).contains("Potion of MEGA Health")) {
+                                    int tempMH = atom.getHealth() + 500;
+                                    atom.setHealth(tempMH);
+                                    while (i < arrayRemove) {
+                                        if (atom.inventory[i] == "Potion of MEGA Health") {
+                                            atom.inventory[i] = null;
+                                            i = 0;
+                                        } else {
+                                            i++;
+                                        }
+                                    }
+                                } else {
+                                    System.out.println("Incorrect input, try again.");
+                                }
+                                break;
+                            default:
+                                System.out.println("Incorrect input, try again.");
+                                break;
+                        }
+                        break;
                     case 3:
                         System.out.println("You have escaped!");
                         System.out.println(" ");
@@ -979,7 +979,7 @@ public class World {
                         break;
                 }
 
-            } else {
+            } else if (enumber >= 4 && enumber <= 5) {
                 System.out.println("An spider is approaching");
                 System.out.println("Choose an option(1-3): ");
                 System.out.println("1. Attack");
@@ -1026,7 +1026,7 @@ public class World {
                                 if (AttackPotionNumber > 0) {
                                     atom.attack(spider);
                                     atom.attack(spider);
-                                    AttackPotionNumber = AttackPotionNumber -1;
+                                    AttackPotionNumber = AttackPotionNumber - 1;
                                 } else {
                                     atom.attack(spider);
                                 }
@@ -1082,7 +1082,7 @@ public class World {
                                     if (AttackPotionNumber > 0) {
                                         atom.magAttack(spider);
                                         atom.magAttack(spider);
-                                        AttackPotionNumber = AttackPotionNumber -1;
+                                        AttackPotionNumber = AttackPotionNumber - 1;
                                     } else {
                                         atom.magAttack(spider);
                                     }
@@ -1126,7 +1126,7 @@ public class World {
                                     if (AttackPotionNumber > 0) {
                                         atom.toothpickAttack(spider);
                                         atom.toothpickAttack(spider);
-                                        AttackPotionNumber = AttackPotionNumber -1;
+                                        AttackPotionNumber = AttackPotionNumber - 1;
                                     } else {
                                         atom.toothpickAttack(spider);
                                     }
@@ -1183,7 +1183,7 @@ public class World {
                                     if (AttackPotionNumber > 0) {
                                         atom.stapleAttack(spider);
                                         atom.stapleAttack(spider);
-                                        AttackPotionNumber = AttackPotionNumber -1;
+                                        AttackPotionNumber = AttackPotionNumber - 1;
                                     } else {
                                         atom.stapleAttack(spider);
                                     }
@@ -1240,7 +1240,7 @@ public class World {
                                     if (AttackPotionNumber > 0) {
                                         atom.flySwatterAttack(spider);
                                         atom.flySwatterAttack(spider);
-                                        AttackPotionNumber = AttackPotionNumber -1;
+                                        AttackPotionNumber = AttackPotionNumber - 1;
                                     } else {
                                         atom.flySwatterAttack(spider);
                                     }
@@ -1295,7 +1295,7 @@ public class World {
                                     if (AttackPotionNumber > 0) {
                                         atom.ratPoisonAttack(spider);
                                         atom.ratPoisonAttack(spider);
-                                        AttackPotionNumber = AttackPotionNumber -1;
+                                        AttackPotionNumber = AttackPotionNumber - 1;
                                     } else {
                                         atom.ratPoisonAttack(spider);
                                     }
@@ -1349,7 +1349,7 @@ public class World {
                                     if (AttackPotionNumber > 0) {
                                         atom.spiderWebAttack(spider);
                                         atom.spiderWebAttack(spider);
-                                        AttackPotionNumber = AttackPotionNumber -1;
+                                        AttackPotionNumber = AttackPotionNumber - 1;
                                     } else {
                                         atom.spiderWebAttack(spider);
                                     }
@@ -1424,74 +1424,74 @@ public class World {
                             System.out.println("4. ");
                         }
 
-                            userInput = bScan.nextInt();
+                        userInput = bScan.nextInt();
 
-                            switch (userInput) {
-                                case 1:
-                                    if (healthNumber <= 3) {
-                                        System.out.println("You got " + healPoint + " health!");
-                                        int moreHealth = atom.getHealth() + healPoint;
-                                        atom.setHealth(moreHealth);
-                                        System.out.println(" ");
-                                        System.out.println("Your health is now: " + atom.getHealth());
-                                        System.out.println(" ");
-                                        healthNumber++;
-                                    } else {
-                                        System.out.println("You have run out of free health. Try again later!");
-                                    }
-                                    break;
-                                case 2:
-                                    if (Arrays.asList(atom.inventory).contains("Attack Potion")) {
-                                        AttackPotionNumber++;
-                                        while (i < arrayRemove) {
-                                            if (atom.inventory[i] == "Attack Potion") {
-                                                atom.inventory[i] = null;
-                                                i = 0;
-                                            } else {
-                                                i++;
-                                            }
+                        switch (userInput) {
+                            case 1:
+                                if (healthNumber <= 3) {
+                                    System.out.println("You got " + healPoint + " health!");
+                                    int moreHealth = atom.getHealth() + healPoint;
+                                    atom.setHealth(moreHealth);
+                                    System.out.println(" ");
+                                    System.out.println("Your health is now: " + atom.getHealth());
+                                    System.out.println(" ");
+                                    healthNumber++;
+                                } else {
+                                    System.out.println("You have run out of free health. Try again later!");
+                                }
+                                break;
+                            case 2:
+                                if (Arrays.asList(atom.inventory).contains("Attack Potion")) {
+                                    AttackPotionNumber++;
+                                    while (i < arrayRemove) {
+                                        if (atom.inventory[i] == "Attack Potion") {
+                                            atom.inventory[i] = null;
+                                            i = 0;
+                                        } else {
+                                            i++;
                                         }
-                                    } else {
-                                        System.out.println("Incorrect input, try again.");
                                     }
-                                    break;
-                                case 3:
-                                    if (Arrays.asList(atom.inventory).contains("Healing Potion")) {
-                                        int tempHP = atom.getHealth() + 30;
-                                        atom.setHealth(tempHP);
-                                        while (i < arrayRemove) {
-                                            if (atom.inventory[i] == "Healing Potion") {
-                                                atom.inventory[i] = null;
-                                                i = 0;
-                                            } else {
-                                                i++;
-                                            }
-                                        }
-                                    } else {
-                                        System.out.println("Incorrect input, try again.");
-                                    }
-                                    break;
-                                case 4:
-                                    if (Arrays.asList(atom.inventory).contains("Potion of MEGA Health")) {
-                                        int tempMH = atom.getHealth() + 500;
-                                        atom.setHealth(tempMH);
-                                        while (i < arrayRemove) {
-                                            if (atom.inventory[i] == "Potion of MEGA Health") {
-                                                atom.inventory[i] = null;
-                                                i = 0;
-                                            } else {
-                                                i++;
-                                            }
-                                        }
-                                    } else {
-                                        System.out.println("Incorrect input, try again.");
-                                    }
-                                    break;
-                                default:
+                                } else {
                                     System.out.println("Incorrect input, try again.");
-                                    break;
-                            }
-                            break;
+                                }
+                                break;
+                            case 3:
+                                if (Arrays.asList(atom.inventory).contains("Healing Potion")) {
+                                    int tempHP = atom.getHealth() + 30;
+                                    atom.setHealth(tempHP);
+                                    while (i < arrayRemove) {
+                                        if (atom.inventory[i] == "Healing Potion") {
+                                            atom.inventory[i] = null;
+                                            i = 0;
+                                        } else {
+                                            i++;
+                                        }
+                                    }
+                                } else {
+                                    System.out.println("Incorrect input, try again.");
+                                }
+                                break;
+                            case 4:
+                                if (Arrays.asList(atom.inventory).contains("Potion of MEGA Health")) {
+                                    int tempMH = atom.getHealth() + 500;
+                                    atom.setHealth(tempMH);
+                                    while (i < arrayRemove) {
+                                        if (atom.inventory[i] == "Potion of MEGA Health") {
+                                            atom.inventory[i] = null;
+                                            i = 0;
+                                        } else {
+                                            i++;
+                                        }
+                                    }
+                                } else {
+                                    System.out.println("Incorrect input, try again.");
+                                }
+                                break;
+                            default:
+                                System.out.println("Incorrect input, try again.");
+                                break;
+                        }
+                        break;
                     case 3:
                         System.out.println("You have escaped!");
                         System.out.println(" ");
@@ -1502,9 +1502,29 @@ public class World {
                         break;
                 }
                 break;
+            } else if (enumber == 6) {
+                System.out.println("You find a cake crumb on the floor, leftover from your little brother's birthday party!");
+                System.out.println("You eat it and get +30 health!");
+                int tempHealth = atom.getHealth() + 30;
+                atom.setHealth(tempHealth);
+            } else if (enumber == 7) {
+                System.out.println("You come across a troublesome dust mite.");
+                System.out.println("He lunges at you and takes your" + atom.inventory[0] + "from you!");
+                System.out.println("He runs off beneath a table, and when you chase after him, you realize he's gone.");
+                atom.inventory[0] = null;
+            } else {
+                System.out.println("You come across a small beehive that is filled with worker bees frantically running around.");
+                System.out.println("You learn that their queen has gone missing, and you go and help look for her");
+                System.out.println("After some time, you find her stuck in a sticky trap.");
+                System.out.println("You help her get out, and as a reward for your generosity, she blesses you and wishes you luck on your journey.");
+                System.out.println("You have leveled up and have earned 20 health!");
+                int tempLevel = atom.getHeroLevel() + 1;
+                atom.setHeroLevel(tempLevel);
+                int tempHealth = atom.getHealth() + 20;
+                atom.setHealth(tempHealth);
+
             }
         }
-
     }
 }
 
